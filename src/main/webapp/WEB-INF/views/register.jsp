@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>Sign in</title>
+    <title>Register</title>
     <style><%@include file="/WEB-INF/assets/dist/css/bootstrap.min.css"%></style>
     <style><%@include file="/WEB-INF/assets/dist/css/sign-in.css"%></style>
 </head>
@@ -18,7 +18,7 @@
             <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating">
-            <input type="text" name="username" class="form-control" id="floatingInput1" placeholder="username">
+            <input type="text" name="login" class="form-control" id="floatingInput1" placeholder="login">
             <label for="floatingInput">User name</label>
         </div>
 
@@ -27,19 +27,11 @@
             <label for="floatingPassword">Password</label>
         </div>
         <div class="form-floating">
-            <input type="password" name="repeat-password" class="form-control" id="floatingPassword1" placeholder="Password">
+            <input type="password" name="repeatedPassword" class="form-control" id="floatingPassword1" placeholder="Password">
             <label for="floatingPassword">Repeat password</label>
         </div>
 
-
-
-        <div class="form-check text-start my-3">
-            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Remember me
-            </label>
-        </div>
-        <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+        <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
         <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
     </form>
 </main>

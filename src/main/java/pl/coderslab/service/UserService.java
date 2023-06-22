@@ -9,7 +9,11 @@ import pl.coderslab.repository.UserRepository;
 @Service
 public class UserService {
 
-    private UserRepository userRepository;
+    public UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public void save(User user) {
         userRepository.save(user);
