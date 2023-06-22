@@ -66,12 +66,19 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
-          <groupId>org.projectlombok</groupId>
-          <artifactId>lombok</artifactId>
-          <version>1.18.26</version>
-          <scope>compile</scope>
-      </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.26</version>
+        <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mindrot</groupId>
+      <artifactId>jbcrypt</artifactId>
+      <version>0.4</version>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>DIYbuddy</finalName>

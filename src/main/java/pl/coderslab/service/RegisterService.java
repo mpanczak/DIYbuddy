@@ -1,5 +1,6 @@
 package pl.coderslab.service;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import pl.coderslab.entity.User;
 
@@ -18,7 +19,7 @@ public class RegisterService {
             User user = new User();
             user.setEmail(email);
             user.setLogin(userName);
-            user.setPassword(password);
+            user.setPassword(BCrypt.hashpw(password,BCrypt.gensalt()));
 
             userService.save(user);
         }
