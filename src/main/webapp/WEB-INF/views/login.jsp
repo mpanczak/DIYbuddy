@@ -1,28 +1,36 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: mateusz
-  Date: 21.06.2023
-  Time: 18:58
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
 <html>
 <head>
-    <title>Login</title>
+    <title>Sign in</title>
+    <style><%@include file="/WEB-INF/assets/dist/css/bootstrap.min.css"%></style>
+    <style><%@include file="/WEB-INF/assets/dist/css/sign-in.css"%></style>
 </head>
 <body>
-<h2>Login Panel</h2>
-<div class="container w-25">
-    <form action="/login" method="post">
-        <h1>Logowanie</h1>
-        <div>
-            <input type="text" class="form-control" id="email" name="email" placeholder="podaj adres email">
+<main class="form-signin w-100 m-auto">
+    <form method="post" action="login">
+<%--        <img class="mb-4" src="../assets/brand/diybuddy.jpg" alt="" width="72" height="57">--%>
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+        <div class="form-floating">
+            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
         </div>
-        <div class="form-group">
-            <input type="text" class="form-control" id="password" name="password" placeholder="podaj hasło">
+        <div class="form-floating">
+            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
         </div>
-        <button class="btn btn-color rounded-0" type="submit">Zaloguj</button>
+
+        <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Remember me
+            </label>
+        </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
     </form>
-</div>
+</main>
 </body>
 </html>

@@ -5,10 +5,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import pl.coderslab.service.LoginService;
 
 @Controller
 @RequestMapping("/")
 public class LoginController {
+
+    private final LoginService loginService;
+
+    public LoginController(LoginService loginService) {
+        this.loginService = loginService;
+    }
 
     @GetMapping("login")
     public String showLoginForm() {
@@ -17,7 +24,13 @@ public class LoginController {
 
     @PostMapping("login")
     public String processLoginForm(@RequestParam String email, @RequestParam String password) {
-        return "redirect:/profile";
+
+        if (loginService.isUserValid()) {
+            return "redirect:/profile";
+        } else {
+            return "redirect:/login";
+        }
+
     }
 
 }
