@@ -25,7 +25,7 @@ public class LoginController {
     @PostMapping("login")
     public String processLoginForm(@RequestParam String email, @RequestParam String password) {
 
-        if (loginService.isUserValid()) {
+        if (loginService.isUserValid(email, password)) {
             return "redirect:/profile";
         } else {
             return "redirect:/login";

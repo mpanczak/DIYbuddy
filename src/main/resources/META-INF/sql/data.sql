@@ -1,2 +1,2 @@
-INSERT INTO users (email, login, password) VALUES ('johndoe@gmail.com', 'johndoe', 'secret');
-INSERT INTO users (email, login, password) VALUES ('mpanczak@gmail.com', 'mpanczak', 'changeit');
+INSERT INTO users (email, login, password) VALUES ('johndoe@gmail.com', 'johndoe', '$2a$10$b5qjI/WewW1JLZEPEqzx5uYkQRz7tMuVmkQzyOVenYO57nQk.Me1m'); # secret
+INSERT INTO users (email, login, password) VALUES ('mpanczak@gmail.com', 'mpanczak', '$2a$10$Dd3N5h3l4L9Afs9BOlPZweJplotTwc5VMUWUis1rJvfEJpKEOFcX.'); # changeit
